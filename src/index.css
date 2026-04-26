@@ -1,0 +1,49 @@
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  }
+
+body {
+   background: #0a0a0f;
+   color: #e8e8f0; 
+   font-family: 'Space Grotesk', sans-serif; 
+  }
+
+  @keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-25px); }
+}
+/* ── THEME VARIABLES ── */
+:root,
+[data-theme="dark"] {
+  --bg: #0a0a0f;
+  --bg-card: #111118;
+  --border: #1e1e2e;
+  --text: #e8e8f0;
+  --text-muted: #aaaabc;
+  --text-dim: #888899;
+  --accent: #c084fc;
+}
+
+[data-theme="light"] {
+  --bg: #f5f5ff;
+  --bg-card: #ffffff;
+  --border: #e2e2f0;
+  --text: #1a1a2e;
+  --text-muted: #4a4a6a;
+  --text-dim: #7a7a9a;
+  --accent: #9333ea;
+}
+
+/* Smooth transition on theme switch */
+*, *::before, *::after {
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+
